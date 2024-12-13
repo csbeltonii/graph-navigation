@@ -1,0 +1,14 @@
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\bin\Debug\net8.0\GraphSurvey.exe
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\bin\Debug\net8.0\GraphSurvey.deps.json
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\bin\Debug\net8.0\GraphSurvey.runtimeconfig.json
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\bin\Debug\net8.0\GraphSurvey.dll
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\bin\Debug\net8.0\GraphSurvey.pdb
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.AssemblyInfoInputs.cache
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.AssemblyInfo.cs
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.csproj.CoreCompileInputs.cache
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.dll
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\refint\GraphSurvey.dll
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.pdb
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.genruntimeconfig.cache
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\ref\GraphSurvey.dll
