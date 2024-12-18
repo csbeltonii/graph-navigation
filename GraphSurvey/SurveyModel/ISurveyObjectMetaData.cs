@@ -1,4 +1,6 @@
-﻿namespace GraphSurvey;
+﻿using GraphSurvey.GraphModel;
+
+namespace GraphSurvey.SurveyModel;
 
 public interface ISurveyObjectMetaData
 {

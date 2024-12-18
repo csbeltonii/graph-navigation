@@ -1,4 +1,6 @@
-﻿namespace GraphSurvey;
+﻿using GraphSurvey.GraphModel;
+
+namespace GraphSurvey.SurveyModel;
 
 public class SurveyObjectMetaData : ISurveyObjectMetaData
 {
@@ -17,5 +19,7 @@ public class SurveyObjectMetaData : ISurveyObjectMetaData
 
     public string Name { get; set; } = string.Empty;
     public string Type { get; set; } = string.Empty;
+
     public IReadOnlyList<NavigationCondition> NavigationConditions { get; set; } = [];
+    public Action Display { get; init; } = () => { };
 }

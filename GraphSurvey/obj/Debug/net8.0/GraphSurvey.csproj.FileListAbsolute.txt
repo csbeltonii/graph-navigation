@@ -12,3 +12,4 @@ C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\refint\Grap
 C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.pdb
 C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.genruntimeconfig.cache
 C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\ref\GraphSurvey.dll
+C:\Users\tehbl\source\repos\GraphSurvey\GraphSurvey\obj\Debug\net8.0\GraphSurvey.sourcelink.json

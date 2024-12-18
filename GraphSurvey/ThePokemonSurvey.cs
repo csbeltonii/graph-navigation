@@ -1,9 +1,10 @@
-﻿namespace GraphSurvey;
+﻿using GraphSurvey.GraphModel;
+using GraphSurvey.SurveyModel;
+
+namespace GraphSurvey;
 
 public static class ThePokemonSurvey
 {
-    private static Dictionary<string, int> Quota = [];
-
     public static List<Question> GeneratePokemonQuestions()
     {
         var q1 = new Question("Welcome to the world of Pokemon. Are you a boy or a girl?", "Q_GENDER")
@@ -13,10 +14,6 @@ public static class ThePokemonSurvey
                 new Choice("R1", 1, "Boy"),
                 new Choice("R2", 2, "Girl"),
                 new Choice("R3", 3, "Prefer not to say", isTerminate: true)
-            ],
-            NavigationConditions =
-            [
-                new NavigationCondition("R3", "Q_END")
             ]
         };
 
@@ -30,8 +27,17 @@ public static class ThePokemonSurvey
             ]
         };
 
-        var q3 = new Question("Let's begin your Pokemon adventure", "Q_END");
+        var q3 = new Question("Let's begin your Pokemon adventure", "Q_BEGIN");
 
+        var q4 = new Question("What region would you like to start in?", "Q_REGION")
+        {
+            Choices =
+            [
+                new Choice("R1", 1, "Kanto"),
+                new Choice("R2", 2, "Johto"),
+                new Choice("R3", 3, "Hoenn"),
+            ]
+        };
 
         return
         [
@@ -76,4 +82,11 @@ public static class ThePokemonSurvey
 
         return graph;
     }
+
+    public static SurveyQuota GenerateQuota() => new(
+        [
+            new QuotaCell("Q_GENDER.R1", 1),
+            new QuotaCell("Q_GENDER.R2", 1),
+        ]
+    );
 }

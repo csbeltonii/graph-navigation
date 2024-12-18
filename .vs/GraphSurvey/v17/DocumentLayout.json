@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\surveyquota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\surveyquota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\thepokemonsurvey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\thepokemonsurvey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\quotacell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\quotacell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\surveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\surveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\isurveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\isurveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\isurveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\isurveyobjectmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|c:\\users\\tehbl\\source\\repos\\graphsurvey\\graphsurvey\\surveymodel\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3695463D-F70E-448B-BEB1-31E3A7125F06}|GraphSurvey\\GraphSurvey.csproj|solutionrelative:graphsurvey\\surveymodel\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,61 +46,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 349,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Node.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\Node.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Node.cs",
-              "RelativeToolTip": "GraphSurvey\\Node.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowBgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T01:59:36.465Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Choice.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Choice.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\Choice.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Choice.cs",
-              "RelativeToolTip": "GraphSurvey\\Choice.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\Choice.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\Choice.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\Choice.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\Choice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T18:06:44.549Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\Question.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\Question.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\Question.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\Question.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T18:06:41.907Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Question.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\Question.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Question.cs",
-              "RelativeToolTip": "GraphSurvey\\Question.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:06:41.907Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Program.cs",
               "RelativeDocumentMoniker": "GraphSurvey\\Program.cs",
               "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Program.cs",
               "RelativeToolTip": "GraphSurvey\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T02:10:58.418Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Survey.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\Survey.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\Survey.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\Survey.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\Survey.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvx4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T02:15:52.621Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThePokemonSurvey.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\ThePokemonSurvey.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\ThePokemonSurvey.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\ThePokemonSurvey.cs",
+              "RelativeToolTip": "GraphSurvey\\ThePokemonSurvey.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAjwFUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T02:25:57.049Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -122,54 +138,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ThePokemonSurvey.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\ThePokemonSurvey.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\ThePokemonSurvey.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\ThePokemonSurvey.cs",
-              "RelativeToolTip": "GraphSurvey\\ThePokemonSurvey.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "QuotaCell.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\QuotaCell.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\QuotaCell.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\QuotaCell.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\QuotaCell.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T02:25:57.049Z",
+              "WhenOpened": "2024-12-18T02:54:13.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Survey.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Survey.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\Survey.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\Survey.cs",
-              "RelativeToolTip": "GraphSurvey\\Survey.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCsAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "SurveyObjectMetaData.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\SurveyObjectMetaData.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\SurveyObjectMetaData.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\SurveyObjectMetaData.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\SurveyObjectMetaData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T02:15:52.621Z",
+              "WhenOpened": "2024-12-18T02:53:49.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SurveyQuota.cs",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\SurveyQuota.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\SurveyQuota.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\SurveyQuota.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\SurveyQuota.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T02:53:28.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SurveyObjectMetaData.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyObjectMetaData.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\SurveyObjectMetaData.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyObjectMetaData.cs",
-              "RelativeToolTip": "GraphSurvey\\SurveyObjectMetaData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:19:59.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "ISurveyObjectMetaData.cs",
-              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\ISurveyObjectMetaData.cs",
-              "RelativeDocumentMoniker": "GraphSurvey\\ISurveyObjectMetaData.cs",
-              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\ISurveyObjectMetaData.cs",
-              "RelativeToolTip": "GraphSurvey\\ISurveyObjectMetaData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\ISurveyObjectMetaData.cs",
+              "RelativeDocumentMoniker": "GraphSurvey\\SurveyModel\\ISurveyObjectMetaData.cs",
+              "ToolTip": "C:\\Users\\tehbl\\source\\repos\\GraphSurvey\\GraphSurvey\\SurveyModel\\ISurveyObjectMetaData.cs",
+              "RelativeToolTip": "GraphSurvey\\SurveyModel\\ISurveyObjectMetaData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T02:09:24.45Z",
+              "WhenOpened": "2024-12-14T20:32:22.453Z",
               "EditorCaption": ""
             }
           ]

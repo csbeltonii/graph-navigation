@@ -1,18 +1,22 @@
-﻿using GraphSurvey;
+﻿using GraphSurvey.GraphModel;
+
+namespace GraphSurvey.SurveyModel;
 
 public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> surveyGraph)
 {
     public List<Question> Questions { get; set; } = questions;
     public Graph<SurveyObjectMetaData> SurveyGraph { get; set; } = surveyGraph;
 
+    public SurveyQuota? SurveyQuota { get; set; }
+
     private Question? _currentQuestion;
     private int _currentIndex;
 
-    public void TakeSurvey()
+    public SurveyResult TakeSurvey()
     {
         if (Questions.Count == 0)
         {
-            return;
+            return SurveyResult.EndOfSurvey();
         }
 
         var hasNextQuestion = true;
@@ -40,10 +44,26 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                 }
 
                 var choiceValue = _currentQuestion.Choices.FirstOrDefault(choice => choice.Value.Equals(input))!;
+                var choiceDslValue = choiceValue.DslValue(_currentQuestion.Name);
 
                 if (choiceValue.IsTerminate)
                 {
-                    break;
+                    return SurveyResult.Terminated();
+                }
+
+                if (SurveyQuota is { QuotaCells.Count: > 0 })
+                {
+                    var quotaCell = SurveyQuota.QuotaCells.FirstOrDefault(cell => cell.Condition == choiceDslValue);
+
+                    if (quotaCell != null)
+                    {
+                        if (quotaCell.Filled)
+                        {
+                            return SurveyResult.OverQuota();
+                        }
+
+                        quotaCell.Count++;
+                    }
                 }
 
                 var node = SurveyGraph.Nodes.FirstOrDefault(node => node.GraphData.Name == _currentQuestion.Name)!;
@@ -76,5 +96,9 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                 hasNextQuestion = false;
             }
         }
+
+        return SurveyResult.EndOfSurvey();
     }
+
+    public void SetQuota(SurveyQuota surveyQuota) => SurveyQuota = surveyQuota;
 }

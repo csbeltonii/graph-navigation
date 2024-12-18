@@ -1,4 +1,4 @@
-﻿namespace GraphSurvey;
+﻿namespace GraphSurvey.SurveyModel;
 
 public class Choice(string name, int value, string text, bool isTerminate = false)
 {
