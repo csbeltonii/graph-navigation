@@ -84,6 +84,7 @@ public static class ThePokemonSurvey
     }
 
     public static SurveyQuota GenerateQuota() => new(
+        "QUOTA1",
         [
             new QuotaCell("Q_GENDER.R1", 1),
             new QuotaCell("Q_GENDER.R2", 1),

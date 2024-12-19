@@ -1,7 +1,6 @@
 ﻿using GraphSurvey.GraphModel;
-using GraphSurvey.SurveyModel;
 
-namespace GraphSurvey;
+namespace GraphSurvey.SurveyModel;
 
 public class Question : ISurveyObjectMetaData
 {

@@ -4,10 +4,14 @@ using static System.Console;
 
 WriteLine("Use 0 to navigate backwards.");
 var questions = ThePokemonSurvey.GeneratePokemonQuestions();
+var quotaMarker = new QuotaMarker("QUOTA1");
+
+var questionMetaData = questions.Select(SurveyObjectMetaData.Create).ToList();
+questionMetaData.Insert(1, SurveyObjectMetaData.Create(quotaMarker));
 
 var pokemonBeginnerSurvey = new Survey(
     questions,
-    ThePokemonSurvey.GeneratePokemonSurveyGraph(questions.Select(SurveyObjectMetaData.Create)));
+    ThePokemonSurvey.GeneratePokemonSurveyGraph(questionMetaData));
 
 pokemonBeginnerSurvey.SetQuota(ThePokemonSurvey.GenerateQuota());
 
@@ -15,7 +19,7 @@ while (true)
 {
     WriteLine();
 
-    var surveyResult = pokemonBeginnerSurvey.TakeSurvey();
+    var surveyResult = pokemonBeginnerSurvey.TakeSurveyV2();
 
     WriteLine($"{surveyResult.Message} ({surveyResult.CompletionType})");
 
