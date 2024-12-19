@@ -151,6 +151,11 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                         return SurveyResult.Terminated();
                     }
 
+                    if (_currentChoice.CompleteAfter)
+                    {
+                        return SurveyResult.EndOfSurvey();
+                    }
+
                     var navigateTo = _currentNode
                                      .NavigationConditions
                                      .FirstOrDefault(condition => condition.Value == _currentChoice.Name)?

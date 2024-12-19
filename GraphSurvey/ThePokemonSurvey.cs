@@ -23,11 +23,27 @@ public static class ThePokemonSurvey
             [
                 new Choice("R1", 1, "Bulbasaur"),
                 new Choice("R2", 2, "Charmander"),
-                new Choice("R3", 3, "Squirtle")
+                new Choice("R3", 3, "Squirtle"),
+                new Choice("R4", 4, "Previous")
+            ],
+            NavigationConditions =
+            [
+                new NavigationCondition("R4", "Q_GENDER")
             ]
         };
 
-        var q3 = new Question("Let's begin your Pokemon adventure", "Q_BEGIN");
+        var q3 = new Question("Let's begin your Pokemon adventure", "Q_BEGIN")
+        {
+            Choices =
+            [
+                new Choice("R1", 1, "Continue"),
+                new Choice("R2", 2, "Previous")
+            ],
+            NavigationConditions =
+            [
+                new NavigationCondition("R2", "Q_STARTER")
+            ]
+        };
 
         var q4 = new Question("What region would you like to start in?", "Q_REGION")
         {
@@ -36,14 +52,65 @@ public static class ThePokemonSurvey
                 new Choice("R1", 1, "Kanto"),
                 new Choice("R2", 2, "Johto"),
                 new Choice("R3", 3, "Hoenn"),
+                new Choice("R4", 4, "Back")
+            ],
+            NavigationConditions =
+            [
+                new NavigationCondition("R1", "Q_KANTO"),
+                new NavigationCondition("R2", "Q_JOHTO"),
+                new NavigationCondition("R3", "Q_HOENN"),
+                new NavigationCondition("R4", "Q_REGION")
             ]
         };
 
+        var q5 = new Question("There is nothing to do in Kanto", "Q_KANTO")
+        {
+            Choices = 
+            [
+                new Choice("R1", 1, "Complete", completeAfter: true),
+                new Choice("R2", 2, "Back")
+            ],
+            NavigationConditions =
+            [
+                new NavigationCondition("R2", "Q_REGION")
+            ]
+        };
+
+        var q6 = new Question("There is nothing to do in Johto", "Q_JOHTO")
+        {
+            Choices =
+            [
+                new Choice("R1", 1, "Complete", completeAfter: true),
+                new Choice("R2", 2, "Back")
+            ],
+            NavigationConditions =
+            [
+                new NavigationCondition("R2", "Q_REGION")
+            ]
+        };
+
+        var q7 = new Question("There is nothing to do in Hoenn", "Q_HOENN")
+        {
+            Choices =
+            [
+                new Choice("R1", 1, "Complete", completeAfter: true),
+                new Choice("R2", 2, "Back")
+            ],
+            NavigationConditions =
+            [
+                new NavigationCondition("R2", "Q_REGION")
+            ]
+        };
+        
         return
         [
             q1,
             q2,
-            q3
+            q3, 
+            q4,
+            q5,
+            q6,
+            q7
         ];
     }
 

@@ -2,7 +2,6 @@
 
 public enum CompletionType
 {
-    None,
     EndOfSurvey,
     Terminated,
     OverQuota
