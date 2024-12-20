@@ -28,7 +28,7 @@ public class Graph<TSurveyObjectData>
     {
         var node = new Node<TSurveyObjectData>
         {
-            Index = NodeCount + 1,
+            Index = NodeCount,
             GraphData = value,
             NavigationConditions = value.NavigationConditions
         };

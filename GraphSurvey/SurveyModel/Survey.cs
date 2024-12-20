@@ -32,7 +32,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
 
             if (_currentQuestion.Choices.Count > 0)
             {
-                var input = int.Parse(Console.ReadLine()!);
+                var input = int.Parse(ReadLine()!);
 
                 if (input == 0)
                 {
@@ -130,7 +130,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                         break;
                     }
 
-                    _currentResponse = int.Parse(Console.ReadLine()!);
+                    _currentResponse = int.Parse(ReadLine()!);
 
                     if (_currentResponse == 0)
                     {
@@ -183,7 +183,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                 case "quota":
                     WriteLine("Passed Quota Marker");
 
-                    var lastQuestion = Questions.Find(question => question.Name ==  SurveyGraph.Nodes[_currentIndex - 1].GraphData.Name);
+                    var lastQuestion = Questions.Find(question => question.Name ==  SurveyGraph.Nodes[_currentNode.Index - 1].GraphData.Name);
                     var choiceDslValue = _currentChoice?.DslValue(lastQuestion!.Name);
 
                     if (SurveyQuota is { QuotaCells.Count: > 0 })
@@ -208,7 +208,9 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                         continueExecution = false;
                     }
 
-                    _currentNode = SurveyGraph.Nodes[_currentIndex];
+                    _currentNode = SurveyGraph.Nodes.FirstOrDefault(
+                        node => node.GraphData == _currentNode.Neighbors.FirstOrDefault()!.GraphData
+                    );
 
                     break;
                 default:
