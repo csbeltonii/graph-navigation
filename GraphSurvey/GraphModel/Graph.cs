@@ -16,7 +16,9 @@ public class Graph<TSurveyObjectData>
                                {
                                    From = node,
                                    To = to,
-                                   Condition = node.NavigationConditions[index]
+                                   Condition = node.NavigationConditions.Count > 0 
+                                       ?  node.NavigationConditions[index]
+                                       : new NavigationCondition("Any", "")
                                }
                            )
            )

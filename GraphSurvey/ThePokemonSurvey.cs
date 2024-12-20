@@ -1,10 +1,20 @@
 ﻿using GraphSurvey.GraphModel;
 using GraphSurvey.SurveyModel;
+using static System.Console;
 
 namespace GraphSurvey;
 
+/// <summary>
+/// A simple survey based on beginning a Pokémon Journey.
+/// Demonstrates graph navigation using choices to navigate linearly, dynamically,
+/// and evaluate a quota.
+/// </summary>
 public static class ThePokemonSurvey
 {
+    /// <summary>
+    /// Generates seven questions pertaining to starting a Pokémon adventure.
+    /// </summary>
+    /// <returns></returns>
     public static List<Question> GeneratePokemonQuestions()
     {
         var q1 = new Question("Welcome to the world of Pokemon. Are you a boy or a girl?", "Q_GENDER")
@@ -52,14 +62,14 @@ public static class ThePokemonSurvey
                 new Choice("R1", 1, "Kanto"),
                 new Choice("R2", 2, "Johto"),
                 new Choice("R3", 3, "Hoenn"),
-                new Choice("R4", 4, "Back")
+                new Choice("R4", 4, "Previous")
             ],
             NavigationConditions =
             [
                 new NavigationCondition("R1", "Q_KANTO"),
                 new NavigationCondition("R2", "Q_JOHTO"),
                 new NavigationCondition("R3", "Q_HOENN"),
-                new NavigationCondition("R4", "Q_REGION")
+                new NavigationCondition("R4", "Q_BEGIN")
             ]
         };
 
@@ -68,7 +78,7 @@ public static class ThePokemonSurvey
             Choices = 
             [
                 new Choice("R1", 1, "Complete", completeAfter: true),
-                new Choice("R2", 2, "Back")
+                new Choice("R2", 2, "Previous")
             ],
             NavigationConditions =
             [
@@ -81,7 +91,7 @@ public static class ThePokemonSurvey
             Choices =
             [
                 new Choice("R1", 1, "Complete", completeAfter: true),
-                new Choice("R2", 2, "Back")
+                new Choice("R2", 2, "Previous")
             ],
             NavigationConditions =
             [
@@ -94,7 +104,7 @@ public static class ThePokemonSurvey
             Choices =
             [
                 new Choice("R1", 1, "Complete", completeAfter: true),
-                new Choice("R2", 2, "Back")
+                new Choice("R2", 2, "Previous")
             ],
             NavigationConditions =
             [
@@ -114,38 +124,89 @@ public static class ThePokemonSurvey
         ];
     }
 
-    public static Graph<SurveyObjectMetaData> GeneratePokemonSurveyGraph(IEnumerable<SurveyObjectMetaData> surveyObjectMetaData)
+    /// <summary>
+    /// Generates the survey graph based on the provided survey object metadata
+    /// </summary>
+    /// <param name="surveyObjectMetaData"></param>
+    /// <param name="delayBetweenActions"></param>
+    /// <returns></returns>
+    public static Graph<SurveyObjectMetaData> GeneratePokemonSurveyGraph(IEnumerable<SurveyObjectMetaData> surveyObjectMetaData, bool delayBetweenActions = false)
     {
         var graph = new Graph<SurveyObjectMetaData>();
+
+        WriteLine("==========================");
+        WriteLine("==========================");
+        WriteLine("==========================");
+        WriteLine();
+        WriteLine("Adding nodes to graph.");
+        WriteLine();
 
         var nodes = surveyObjectMetaData
                     .Select(graph.Add)
                     .ToList();
 
+        WriteLine("==========================");
+        WriteLine("==========================");
+        WriteLine("==========================");
+
+        WriteLine("Generating nodes neighbor lists.");
+        WriteLine();
+
         foreach (var node in nodes)
         {
-            var neighbors = new List<Node<SurveyObjectMetaData>>();
+            var neighbors = new HashSet<Node<SurveyObjectMetaData>>();
+            var nodeName = node.GraphData.Name;
+
+            WriteLine($"Adding neighbors for node: {nodeName}");
 
             if (node.NavigationConditions.Count > 0)
             {
-                neighbors.AddRange(
-                    nodes.Where(n => node
-                                     .NavigationConditions
-                                     .Select(nc => nc.TargetNode)
-                                     .Contains(n.GraphData.Name))
+                var dynamicNavigationNeighbors = nodes.Where(
+                    n => node
+                         .NavigationConditions
+                         .Select(nc => nc.TargetNode)
+                         .Contains(n.GraphData.Name)
                 );
+
+                foreach (var dynamicNavigationNeighbor in dynamicNavigationNeighbors)
+                {
+                    neighbors.Add(dynamicNavigationNeighbor);
+                }
+            }
+            else 
+            {
+                if (nodes.FirstOrDefault(
+                        neighbor => neighbor.Index == node.Index + 1
+                    ) is { } nextNode)
+                {
+                    neighbors.Add(nextNode);
+                }
             }
 
-            neighbors.AddRange(nodes
-                               .Where(n => n.Index ==
-                                           node.Index++ ||
-                                           n.Index == node.Index--
-                               )
-                               .ToList()
-            );
+            node.Neighbors = neighbors.ToList();
 
-            node.Neighbors = neighbors;
+            WriteLine($"\t{nodeName} can navigate to {string.Join(", ", node.Neighbors.Select(_ => _.GraphData.Name))}");
+            WriteLine();
         }
+
+        WriteLine("==========================");
+        WriteLine("==========================");
+        WriteLine("==========================");
+        WriteLine();
+        WriteLine("Generating edges...");
+        WriteLine();
+
+        var edges = graph.GetEdges();
+
+        foreach (var edge in edges)
+        {
+            WriteLine($"On Edge {edge.Condition?.Value}, {edge.From.GraphData.Name} connects to {edge.To.GraphData.Name}.");
+            WriteLine();
+        }
+
+        WriteLine("==========================");
+        WriteLine("==========================");
+        WriteLine("==========================");
 
         return graph;
     }

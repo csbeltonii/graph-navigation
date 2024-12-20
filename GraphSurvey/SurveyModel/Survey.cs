@@ -171,6 +171,11 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                     else
                     {
                         _currentNode = SurveyGraph.Nodes.FirstOrDefault(node => node.GraphData.Name == navigateTo);
+
+                        if (_currentChoice.Name == "Previous")
+                        {
+                            _currentIndex--;
+                        }
                     }
 
                     if (_currentIndex == SurveyGraph.NodeCount)

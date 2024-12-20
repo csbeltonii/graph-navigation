@@ -8,5 +8,5 @@ public record Edge<TSurveyObjectData>
     public required Node<TSurveyObjectData> From { get; set; }
 
     public required Node<TSurveyObjectData> To { get; set; }
-    public required Condition Condition { get; set; }
+    public required Condition? Condition { get; set; }
 }

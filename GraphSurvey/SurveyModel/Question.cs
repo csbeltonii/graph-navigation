@@ -2,6 +2,11 @@
 
 namespace GraphSurvey.SurveyModel;
 
+/// <summary>
+/// An implementation of a Question Survey object.
+/// Provides metadata to display to the user and navigation conditions for the graph
+/// based on the choices.
+/// </summary>
 public class Question : ISurveyObjectMetaData
 {
     public Question() { }

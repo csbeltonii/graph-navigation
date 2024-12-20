@@ -9,7 +9,7 @@ public record Node<TSurveyObjectData>
 
     public TSurveyObjectData GraphData { get; set; } = new();
 
-    public IReadOnlyList<Node<TSurveyObjectData>> Neighbors { get; set; } = [];
+    public IList<Node<TSurveyObjectData>> Neighbors { get; set; } = [];
 
     public IReadOnlyList<NavigationCondition> NavigationConditions { get; set; } = [];
 }
