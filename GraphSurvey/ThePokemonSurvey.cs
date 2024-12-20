@@ -24,6 +24,11 @@ public static class ThePokemonSurvey
                 new Choice("R1", 1, "Boy"),
                 new Choice("R2", 2, "Girl"),
                 new Choice("R3", 3, "Prefer not to say", isTerminate: true)
+            ],
+            NavigationConditions = 
+            [
+                new NavigationCondition("R1", "QUOTA1"),
+                new NavigationCondition("R2", "QUOTA2")
             ]
         };
 
@@ -38,6 +43,9 @@ public static class ThePokemonSurvey
             ],
             NavigationConditions =
             [
+                new NavigationCondition("R1","Q_BEGIN"),
+                new NavigationCondition("R2", "Q_BEGIN"),
+                new NavigationCondition("R3", "Q_BEGIN"),
                 new NavigationCondition("R4", "Q_GENDER")
             ]
         };
@@ -51,7 +59,8 @@ public static class ThePokemonSurvey
             ],
             NavigationConditions =
             [
-                new NavigationCondition("R2", "Q_STARTER")
+                new NavigationCondition("R2", "Q_STARTER"),
+                new NavigationCondition("R1", "Q_REGION")
             ]
         };
 

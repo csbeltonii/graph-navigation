@@ -1,4 +1,5 @@
 ﻿using GraphSurvey.GraphModel;
+using static System.Console;
 
 namespace GraphSurvey.SurveyModel;
 
@@ -171,11 +172,6 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                     else
                     {
                         _currentNode = SurveyGraph.Nodes.FirstOrDefault(node => node.GraphData.Name == navigateTo);
-
-                        if (_currentChoice.Name == "Previous")
-                        {
-                            _currentIndex--;
-                        }
                     }
 
                     if (_currentIndex == SurveyGraph.NodeCount)
@@ -185,7 +181,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
 
                     break;
                 case "quota":
-                    Console.WriteLine("Passed Quota Marker");
+                    WriteLine("Passed Quota Marker");
 
                     var lastQuestion = Questions.Find(question => question.Name ==  SurveyGraph.Nodes[_currentIndex - 1].GraphData.Name);
                     var choiceDslValue = _currentChoice?.DslValue(lastQuestion!.Name);
@@ -218,6 +214,8 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            WriteLine();
         }
 
 
