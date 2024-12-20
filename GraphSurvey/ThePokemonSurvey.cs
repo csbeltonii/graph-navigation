@@ -137,9 +137,8 @@ public static class ThePokemonSurvey
     /// Generates the survey graph based on the provided survey object metadata
     /// </summary>
     /// <param name="surveyObjectMetaData"></param>
-    /// <param name="delayBetweenActions"></param>
     /// <returns></returns>
-    public static Graph<SurveyObjectMetaData> GeneratePokemonSurveyGraph(IEnumerable<SurveyObjectMetaData> surveyObjectMetaData, bool delayBetweenActions = false)
+    public static Graph<SurveyObjectMetaData> GeneratePokemonSurveyGraph(IEnumerable<SurveyObjectMetaData> surveyObjectMetaData)
     {
         var graph = new Graph<SurveyObjectMetaData>();
 

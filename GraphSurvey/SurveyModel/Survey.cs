@@ -5,7 +5,9 @@ namespace GraphSurvey.SurveyModel;
 
 public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> surveyGraph)
 {
-    public List<Question> Questions { get; set; } = questions;
+    public Dictionary<string, Question> Questions { get; set; } =
+        questions.ToDictionary(question => question.Name, question => question);
+
     public Graph<SurveyObjectMetaData> SurveyGraph { get; set; } = surveyGraph;
 
     public SurveyQuota? SurveyQuota { get; set; }
@@ -16,6 +18,10 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
     private int _currentResponse;
     private Choice? _currentChoice;
 
+    /// <summary>
+    /// Navigates the survey based on the list of questions.
+    /// </summary>
+    /// <returns></returns>
     public SurveyResult TakeSurveyV1()
     {
         if (Questions.Count == 0)
@@ -24,7 +30,8 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
         }
 
         var hasNextQuestion = true;
-        _currentQuestion = Questions[0];
+        var questions = Questions.Values.ToList();
+        _currentQuestion = questions[0];
 
         while (hasNextQuestion)
         {
@@ -42,7 +49,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                     }
 
                     _currentIndex--;
-                    _currentQuestion = Questions[_currentIndex];
+                    _currentQuestion = questions[_currentIndex];
 
                     continue;
                 }
@@ -83,7 +90,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
 
                     if (Questions.Count >= _currentIndex)
                     {
-                        _currentQuestion = Questions[_currentIndex];
+                        _currentQuestion = questions[_currentIndex];
                         continue;
                     }
 
@@ -91,8 +98,8 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                 }
                 else
                 {
-                    _currentQuestion = Questions.First(q => q.Name == navigateTo);
-                    _currentIndex = Questions.IndexOf(_currentQuestion);
+                    _currentQuestion = questions.First(q => q.Name == navigateTo);
+                    _currentIndex = questions.IndexOf(_currentQuestion);
                 }
             }
             else
@@ -104,6 +111,11 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
         return SurveyResult.EndOfSurvey();
     }
 
+    /// <summary>
+    /// Navigates the survey based on the nodes, their navigation conditions, and question lookup.
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
     public SurveyResult TakeSurveyV2()
     {
         if (SurveyGraph.NodeCount == 0)
@@ -121,9 +133,10 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
             switch (_currentNode?.GraphData.Type)
             {
                 case "question":
-                    _currentQuestion = Questions.First(question => question.Name == _currentNode.GraphData.Name);
+                    _currentQuestion = Questions[_currentNode.GraphData.Name];
                     _currentQuestion.Display();
 
+                    // Base case - if there are no questions, break the infinite loop
                     if (_currentQuestion.Choices.Count == 0)
                     {
                         continueExecution = false;
@@ -131,19 +144,6 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                     }
 
                     _currentResponse = int.Parse(ReadLine()!);
-
-                    if (_currentResponse == 0)
-                    {
-                        if (_currentIndex == 0)
-                        {
-                            break;
-                        }
-
-                        _currentIndex--;
-                        _currentQuestion = Questions[_currentIndex];
-
-                        break;
-                    }
 
                     _currentChoice = _currentQuestion.Choices.FirstOrDefault(choice => choice.Value.Equals(_currentResponse))!;
 
@@ -167,7 +167,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                         _currentIndex++;
                         _currentNode = SurveyGraph.Nodes[_currentIndex];
 
-                        _currentQuestion = Questions.FirstOrDefault(question => question.Name == _currentNode.GraphData.Name);
+                        _currentQuestion = Questions[_currentNode.GraphData.Name];
                     }
                     else
                     {
@@ -183,7 +183,7 @@ public class Survey(List<Question> questions, Graph<SurveyObjectMetaData> survey
                 case "quota":
                     WriteLine("Passed Quota Marker");
 
-                    var lastQuestion = Questions.Find(question => question.Name ==  SurveyGraph.Nodes[_currentNode.Index - 1].GraphData.Name);
+                    var lastQuestion = Questions[SurveyGraph.Nodes[_currentNode.Index - 1].GraphData.Name];
                     var choiceDslValue = _currentChoice?.DslValue(lastQuestion!.Name);
 
                     if (SurveyQuota is { QuotaCells.Count: > 0 })

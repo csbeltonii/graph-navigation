@@ -2,6 +2,9 @@
 
 namespace GraphSurvey.SurveyModel;
 
+/// <summary>
+/// Metadata for survey objects used in graph traversal
+/// </summary>
 public class SurveyObjectMetaData : ISurveyObjectMetaData
 {
     public static SurveyObjectMetaData Create(string name, string type) => new()
@@ -21,5 +24,4 @@ public class SurveyObjectMetaData : ISurveyObjectMetaData
     public string Type { get; set; } = string.Empty;
 
     public IReadOnlyList<NavigationCondition> NavigationConditions { get; set; } = [];
-    public Action Display { get; init; } = () => { };
 }

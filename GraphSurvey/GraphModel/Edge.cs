@@ -2,6 +2,11 @@
 
 namespace GraphSurvey.GraphModel;
 
+/// <summary>
+/// Represents a connection between two nodes.
+/// TODO: Intended to be saved as a Cosmos document
+/// </summary>
+/// <typeparam name="TSurveyObjectData"></typeparam>
 public record Edge<TSurveyObjectData>
     where TSurveyObjectData : ISurveyObjectMetaData, new()
 {

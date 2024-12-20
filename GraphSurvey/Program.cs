@@ -2,7 +2,6 @@
 using GraphSurvey.SurveyModel;
 using static System.Console;
 
-WriteLine("Use 0 to navigate backwards.");
 var questions = ThePokemonSurvey.GeneratePokemonQuestions();
 var quotaMarker = new QuotaMarker("QUOTA1");
 

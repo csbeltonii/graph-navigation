@@ -2,6 +2,11 @@
 
 namespace GraphSurvey.GraphModel;
 
+/// <summary>
+/// Represents a node on the graph.
+/// TODO: Store in Cosmos for point-read operations when node data is required.
+/// </summary>
+/// <typeparam name="TSurveyObjectData"></typeparam>
 public record Node<TSurveyObjectData>
     where TSurveyObjectData : ISurveyObjectMetaData, new()
 {
